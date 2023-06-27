@@ -5,9 +5,6 @@ import { initialDentist } from "../models";
 
 const BASE_URL = import.meta.env.VITE_API_KEY;
 
-async function delay(ms: number) {
-  await new Promise((resolve) => setTimeout(resolve, ms));
-}
 
 const useFetch: (id?: number) => fetchReturnProps = (id) => {
   const [dentists, setDentists] = useState<dentists[]>([]);

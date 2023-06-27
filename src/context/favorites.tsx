@@ -1,5 +1,4 @@
 import { createContext, useEffect, useReducer } from "react";
-import React from "react";
 
 type AppState = {
   favorites: string[];

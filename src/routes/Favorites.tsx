@@ -5,7 +5,7 @@ import { favoriteContext } from "../context/favorites";
 import useFetch from "../hooks/useFetch";
 import { dentists } from "../types";
 
-import { AiOutlineHeart, AiFillHeart } from "react-icons/ai";
+import { AiFillHeart } from "react-icons/ai";
 import { Link } from "react-router-dom";
 
 const fakeArr: string[] = new Array(30).fill("");

@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import { useState, useContext } from "react";
 import "./style.css";
 import { BsSun as SunIcon } from "react-icons/bs";
 import { BsMoon as MoonIcon } from "react-icons/bs";

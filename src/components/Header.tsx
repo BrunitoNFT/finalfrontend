@@ -12,7 +12,7 @@ import { AiFillHeart } from "react-icons/ai";
 import ToggleTheme from "./ToggleTheme";
 
 const Header: React.FC = () => {
-  const { state, dispatch } = useContext(themeContext);
+  const { state } = useContext(themeContext);
 
   const { state: favoriteState } = useContext(favoriteContext);
 
