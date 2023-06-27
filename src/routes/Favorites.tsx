@@ -64,7 +64,7 @@ const Favorites: React.FC = () => {
                 </div>
                 <div>
                   <img
-                    src="/images/doctor.jpg"
+                    src="/doctor.jpg"
                     alt=""
                     className="w-full h-40 object-cover mb-2 rounded-md dark:outline dark:outline-gray-800"
                   />

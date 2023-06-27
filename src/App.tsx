@@ -18,16 +18,12 @@ const App: React.FC = () => {
         <div
           className="w-full h-full flex justify-center items-center  relative select-none  bg-cover bg-center "
           style={{
-            backgroundImage: `url('../public/images/odontologos2.png')`,
+            backgroundImage: `url('/odontologos2.png')`,
           }}
         >
           <h2 className="text-center text-7xl  text-gray-800  mt-12 absolute font-extralight">
             Welcome to the final project | Frontend |||{" "}
           </h2>
-          {/* <img
-            src="../public/images/odontologos2.png"
-            className="object-cover"
-          /> */}
         </div>
       )}
       <Outlet />

@@ -37,13 +37,8 @@ const DentistIndividual: React.FC<Props> = ({
 
   return (
     <div className="flex flex-col bg-white dark:bg-gray-300 hover:scale-95 transition-all duration-500 rounded-xl overflow-hidden border-2 ">
-      
       <div className="  flex gap-2 justify-center shadow-xl p-4 max-sm:flex-col">
-        <img
-          src="/images/doctor.jpg"
-          alt=""
-          className="w-60 h-60  mb-2 rounded-md"
-        />
+        <img src="/doctor.jpg" alt="" className="w-60 h-60  mb-2 rounded-md" />
         <div>
           <h2 className="font-bold text-2xl text-gray-500 dark:text-black">
             {name}
