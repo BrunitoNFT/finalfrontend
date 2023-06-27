@@ -53,7 +53,7 @@ const Favorites: React.FC = () => {
               className="w-52 h-96 hover:scale-95 rounded-md p-4 flex flex-col  shadow-md justify-between dark:outline dark:outline-gray-800 bg-blue-100 dark:bg-blue-300 transition-all duration-500"
             >
               <Link
-                to={String(dentist.id)}
+                to={"/dentists/" + String(dentist.id)}
                 className="w-full h-full flex flex-col justify-between "
               >
                 <div className="flex flex-col gap-2">

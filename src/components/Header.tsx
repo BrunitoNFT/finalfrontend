@@ -19,7 +19,7 @@ const Header: React.FC = () => {
   console.log("Context en header: ", state);
 
   return (
-    <header className="w-full h-16 bg-blue-300 text-white font-bold text-2xl flex justify-around items-center dark:bg-blue-800 transition-all duration-500 relative">
+    <header className="w-full h-16 bg-blue-300 text-white font-bold text-2xl flex justify-around items-center dark:bg-blue-800 transition-all duration-500 ">
       <div></div>
       <NavLink
         to="/dentists"
@@ -46,7 +46,7 @@ const Header: React.FC = () => {
       <NavLink
         to="/favorites"
         className={({ isActive }) =>
-          "relative" + (isActive ? "scale-110 border-b-2" : "")
+          "" + (isActive ? "scale-110 border-b-2" : "")
         }
       >
         <div className="w-full h-full relative flex justify-center items-center ">

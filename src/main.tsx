@@ -11,10 +11,13 @@ import Dentist from "./routes/Dentist.tsx";
 import { ThemeProvider } from "./context/theme.tsx";
 import { FavoriteProvider } from "./context/favorites.tsx";
 
+import { Toaster } from "sonner";
+
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <ThemeProvider>
     <FavoriteProvider>
       <BrowserRouter>
+        <Toaster position="top-center" richColors />
         <Routes>
           <Route path="/" element={<App />}>
             <Route path="dentists" element={<Dentists />} />

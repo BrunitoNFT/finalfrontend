@@ -21,6 +21,7 @@ const useFetch: (id?: number) => fetchReturnProps = (id) => {
   const fetchData: (id?: number) => Promise<void> = useCallback(async (id) => {
     setError({ message: "", error: false });
     setLoading(true);
+
     try {
       if (typeof id === "number" && id > 0) {
         const dentist = await fetch(BASE_URL + "/" + id);

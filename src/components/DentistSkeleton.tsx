@@ -8,7 +8,7 @@ import { MdOutlineWorkOutline } from "react-icons/md";
 const DentistSkeleton: React.FC = () => {
   return (
     <div className="flex flex-col bg-white dark:bg-gray-300 hover:scale-95 transition-all duration-500 rounded-xl overflow-hidden border-2">
-      <div className="  flex gap-2 justify-center shadow-xl p-4 ">
+      <div className="  flex gap-2 justify-center shadow-xl p-4 max-sm:flex-col">
         <img
           src="/images/doctor.jpg"
           alt=""
@@ -40,6 +40,7 @@ const DentistSkeleton: React.FC = () => {
           </p>
         </div>
       </div>
+      <button className="w-full h-10 bg-blue-500 text-white flex justify-center items-center"></button>
     </div>
   );
 };

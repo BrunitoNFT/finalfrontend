@@ -1,11 +1,16 @@
-import React from "react";
+import React, { useContext } from "react";
 
 import { AiOutlinePhone, AiOutlineMail } from "react-icons/ai";
 import { SlLocationPin } from "react-icons/sl";
 import { TbWorldWww } from "react-icons/tb";
 import { MdOutlineWorkOutline } from "react-icons/md";
 
+import { AiOutlineHeart, AiFillHeart } from "react-icons/ai";
+
+import { favoriteContext } from "../context/favorites";
+
 interface Props {
+  id: number;
   name: string;
   username: string;
   phone: string;
@@ -25,10 +30,15 @@ const DentistIndividual: React.FC<Props> = ({
   street,
   website,
   companyName,
+  id,
 }) => {
+  const { state, dispatch } = useContext(favoriteContext);
+  const { favorites } = state;
+
   return (
-    <div className="flex flex-col bg-white dark:bg-gray-300 hover:scale-95 transition-all duration-500 rounded-xl overflow-hidden border-2">
-      <div className="  flex gap-2 justify-center shadow-xl p-4 ">
+    <div className="flex flex-col bg-white dark:bg-gray-300 hover:scale-95 transition-all duration-500 rounded-xl overflow-hidden border-2 ">
+      
+      <div className="  flex gap-2 justify-center shadow-xl p-4 max-sm:flex-col">
         <img
           src="/images/doctor.jpg"
           alt=""
@@ -63,6 +73,12 @@ const DentistIndividual: React.FC<Props> = ({
           </p>
         </div>
       </div>
+      <button
+        className="w-full h-10 bg-blue-500 text-white flex justify-center items-center"
+        onClick={() => dispatch({ type: "toggleFav", payload: String(id) })}
+      >
+        {favorites.includes(String(id)) ? <AiFillHeart /> : <AiOutlineHeart />}
+      </button>
     </div>
   );
 };
