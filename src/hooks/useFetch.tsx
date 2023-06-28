@@ -1,10 +1,11 @@
 import { useCallback, useEffect, useState } from "react";
-import { fetchReturnProps, dentists, fetchError } from "../types";
+import { fetchReturnProps, dentists, fetchError } from "../utils/types";
 
-import { initialDentist } from "../models";
+import { initialDentist } from "../utils/models";
+
+import { toast } from "sonner";
 
 const BASE_URL = import.meta.env.VITE_API_KEY;
-
 
 const useFetch: (id?: number) => fetchReturnProps = (id) => {
   const [dentists, setDentists] = useState<dentists[]>([]);
@@ -35,6 +36,7 @@ const useFetch: (id?: number) => fetchReturnProps = (id) => {
       }
     } catch (error) {
       setError({ message: "Error al obtener los datos", error: true });
+      toast.error("Error al obtener los datos");
       console.log(error);
     } finally {
       setLoading(false);
