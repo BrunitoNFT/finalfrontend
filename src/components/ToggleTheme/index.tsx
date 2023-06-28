@@ -3,7 +3,7 @@ import "./style.css";
 import { BsSun as SunIcon } from "react-icons/bs";
 import { BsMoon as MoonIcon } from "react-icons/bs";
 
-import { themeContext } from "../context/theme";
+import { themeContext } from "../../context/theme";
 
 const ThemeToggle = () => {
   const { state, dispatch } = useContext(themeContext);
